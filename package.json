@@ -16,7 +16,9 @@
     "nuxt": "^2.0.0",
     "nuxt-buefy": "^0.3.2",
     "@nuxtjs/axios": "^5.3.6",
-    "@nuxtjs/pwa": "^3.0.0-0"
+    "@nuxtjs/pwa": "^3.0.0-0",
+    "vue": "latest",
+    "axios": "latest"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^1.0.1",
@@ -30,10 +32,11 @@
     "@vue/test-utils": "^1.0.0-beta.27",
     "babel-jest": "^24.1.0",
     "jest": "^24.1.0",
-    "vue-jest": "^4.0.0-0"
+    "vue-jest": "^4.0.0-0",
+    "vuex": "latest"
   },
   "lint-staged": {
-    "*.ts | *.vue | *.js": [
+    "*.(ts|vue|js)": [
       "eslint --fix",
       "git add"
     ]
