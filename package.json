@@ -31,5 +31,11 @@
     "babel-jest": "^24.1.0",
     "jest": "^24.1.0",
     "vue-jest": "^4.0.0-0"
+  },
+  "lint-staged": {
+    "*.ts | *.vue | *.js": [
+      "eslint --fix",
+      "git add"
+    ]
   }
 }
