@@ -4,11 +4,28 @@
     <h2 class="title is-3 has-text-grey">
       "Just start <b-icon icon="rocket" size="is-large" />"
     </h2>
-    <h3 class="subtitle is-6 has-text-grey">
-      Author:
-      <a href="https://github.com/kkiyama117">
-        KKiyama117
-      </a>
-    </h3>
+    <ul>
+      <li v-for="(user, index) in users" :key="index">
+        {{ user.firstName + user.lastName }}
+      </li>
+    </ul>
   </section>
 </template>
+
+<script>
+import { mapGetters, mapMutations, mapActions } from 'vuex'
+
+export default {
+  computed: mapGetters({
+    users: 'users/users'
+  }),
+  methods: {
+    ...mapActions({
+      getUsers: 'users/getUsers'
+    }),
+    ...mapMutations({
+      setUsers: 'users/setUsers'
+    })
+  }
+}
+</script>
